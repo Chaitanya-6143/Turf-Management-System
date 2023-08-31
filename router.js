@@ -1,0 +1,12 @@
+const express = require("express");
+const router = express.Router();
+const userController = require("./controller/userController");
+router.get("/", userController.home);
+router.post("/register", userController.register);
+router.post("/login", userController.login);
+router.post("/logout", userController.logout);
+router.post("/book", userController.book);
+router.post("/doesEmailExist", userController.doesEmailExist);
+router.post("/doesPhoneExist", userController.doesPhoneExist);
+router.post("/doesSlotExist", userController.doesSlotExist);
+module.exports = router;
